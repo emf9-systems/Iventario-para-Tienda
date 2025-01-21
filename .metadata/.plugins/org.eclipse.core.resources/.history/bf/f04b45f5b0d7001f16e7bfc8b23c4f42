@@ -1,0 +1,28 @@
+package com.aplicacion;
+
+import com.clases.ComputadoraPortatil;
+import com.clases.Televisor;
+import com.clases.TiendaElectronica;
+
+public class Aplicacion {
+    public static void main(String[] args) {
+        TiendaElectronica tienda = new TiendaElectronica();
+
+        Televisor tv = new Televisor("Televisor Samsung", 500.00, 10, 55, "4K UHD");
+        ComputadoraPortatil laptop = new ComputadoraPortatil("Laptop Dell", 800.00, 5, "Dell", 16, "SN123456");
+
+        // Agregar productos al inventario
+        tienda.agregarProducto(tv);
+        tienda.agregarProducto(laptop);
+
+        // Mostrar productos disponibles
+        tienda.mostrarProductos();
+
+        // Realizar ventas
+        tienda.realizarVenta("Televisor Samsung");
+        tienda.realizarVenta("Laptop Dell");
+
+        // Mostrar productos después de la venta
+        tienda.mostrarProductos();
+    }
+}

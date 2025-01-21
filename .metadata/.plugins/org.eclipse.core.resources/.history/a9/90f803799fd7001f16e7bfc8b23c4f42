@@ -1,0 +1,89 @@
+package com.clases;
+
+public class Televisor extends ProductoElectrodomestico {
+	
+	private double tamanoTelevisorPulgadas;
+	private double resolucionTelevisor;
+	private String marcaTelevisor;
+	private boolean smartTV;
+	
+	
+	public Televisor(String nombre, int precio, int cantidadDisponible, double tamanoTelevisorPulgadas,
+			double resolucionTelevisor, String marcaTelevisor, boolean smartTV) {
+		super(nombre, precio, cantidadDisponible);
+		this.tamanoTelevisorPulgadas = tamanoTelevisorPulgadas;
+		this.resolucionTelevisor = resolucionTelevisor;
+		this.marcaTelevisor = marcaTelevisor;
+		this.smartTV = smartTV;
+	}
+	
+	
+	
+	public double getTamanoTelevisorPulgadas() {
+		return tamanoTelevisorPulgadas;
+	}
+
+
+
+	public void setTamanoTelevisorPulgadas(double tamanoTelevisorPulgadas) {
+		this.tamanoTelevisorPulgadas = tamanoTelevisorPulgadas;
+	}
+
+
+
+	public double getResolucionTelevisor() {
+		return resolucionTelevisor;
+	}
+
+
+
+	public void setResolucionTelevisor(double resolucionTelevisor) {
+		this.resolucionTelevisor = resolucionTelevisor;
+	}
+
+
+
+	public String getMarcaTelevisor() {
+		return marcaTelevisor;
+	}
+
+
+
+	public void setMarcaTelevisor(String marcaTelevisor) {
+		this.marcaTelevisor = marcaTelevisor;
+	}
+
+
+
+	public boolean isSmartTV() {
+		return smartTV;
+	}
+
+
+
+	public void setSmartTV(boolean smartTV) {
+		this.smartTV = smartTV;
+	}
+
+
+
+	@Override
+	public void mostrarInformacion() {
+		System.out.println("Modelo Televisor: "+super.precio);
+		System.out.println("Marca del televisor: "+this.marcaTelevisor);
+		System.out.println("Tamano y resolucion del televisor: "+this.tamanoTelevisorPulgadas+", "+this.resolucionTelevisor);
+		
+		if(this.smartTV == true) {
+			System.out.println("Smart TV: Si");
+		}else {
+			System.out.println("Smart TV: No");
+		}
+		
+		System.out.println("Precio del televisor: "+super.nombre);
+		System.out.println("Cantidad en tienda: "+super.cantidadDisponible);
+
+	}
+	
+	
+
+}

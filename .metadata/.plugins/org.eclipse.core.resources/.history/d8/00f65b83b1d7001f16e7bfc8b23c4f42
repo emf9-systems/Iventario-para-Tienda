@@ -1,0 +1,29 @@
+package com.aplicacion;
+
+import com.clases.ComputadorPortatil;
+import com.clases.Televisor;
+import com.clases.TiendaElectronica;
+
+public class Aplicacion {
+    public static void main(String[] args) {
+        TiendaElectronica tienda = new TiendaElectronica();
+
+        Televisor tv = new Televisor("Smart TV 32” HD ROKU Caixun", 99990.0, 12, 32.0,
+    			768, "Caixun", true);
+        ComputadorPortatil laptop = new ComputadorPortatil("HP VICTUS 15-fb0130la", 529990.0, 6, "HP", "AMD Ryzen 5 5600H", "GTX 1650 4GB", true, 8, 512, "SSD", "FreeDOS", 1080, 16.1, 144);
+
+        // Agregar productos al inventario
+        tienda.agregarProducto(tv);
+        tienda.agregarProducto(laptop);
+
+        // Mostrar productos disponibles
+        tienda.mostrarProductos();
+
+        // Realizar ventas
+        tienda.venderProducto("Televisor Samsung");
+        tienda.venderProducto("Laptop Dell");
+
+        // Mostrar productos después de la venta
+        tienda.mostrarProductos();
+    }
+}
